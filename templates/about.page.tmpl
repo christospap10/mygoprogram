@@ -1,0 +1,21 @@
+{{template "base" .}}
+{{define "content"}}
+<div class="container">
+<div class="row">
+  <div class="col">
+    <h1>This is the about page</h1>
+    <p>this is the paragraph of the about page</p>
+    <p>this is the paragraph of the about page</p>
+    <p>this is data from the template context: {{ index .StringMap "name"}}</p>
+    <br>
+    <p>
+      {{if ne (index .StringMap "remoteIP") " "}}
+        This is the remote ip: {{ index .StringMap "remoteIP" }}
+      {{else}}
+        I don't know the remote ip. Visit the <a href="/">home page</a> to find out.
+      {{end}}
+    </p>
+  </div>
+</div>
+</div>
+{{ end }}
