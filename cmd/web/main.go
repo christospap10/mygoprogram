@@ -54,6 +54,6 @@ func main() {
 
 	err = srv.ListenAndServe()
 	if err != nil {
-		log.Fatal("Error starting server: ", err)
+		log.Fatal("Error starting server -> ", err)
 	}
 }
